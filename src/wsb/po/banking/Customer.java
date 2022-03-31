@@ -28,4 +28,12 @@ public class Customer {
         return lastName;
     }
 
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", account=" + (account==null ? "Brak konta" : account) +
+                '}';
+    }
 }
