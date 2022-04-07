@@ -20,9 +20,13 @@ public class TestBanking {
         customer.setAccount(account);
         System.out.println("Stan klienta "+customer);
 
-        account.withdraw(150);
-        account.deposit(22.5);
-        account.withdraw(47.62);
+
+        System.out.println("Wypłata 150 "+account.withdraw(150));
+        System.out.println("Wpłata 22.5 "+account.deposit(22.5));
+        System.out.println("Wypłata 22.5 "+account.withdraw(2200.5));
+        System.out.println("Wypłata 47.62 "+account.withdraw(47.62));
+        System.out.println("Wpłata -2200.5 "+account.deposit(-22.5));
+
 
         System.out.println("Stan klienta "+customer);
 
