@@ -12,13 +12,21 @@ public class Account {
         return balance;
     }
 
-    public void deposit (double amount) {
+    public boolean deposit (double amount) {
         //balance = balance + amount;
-        balance += amount;
+        if (amount > 0) {
+            balance += amount;
+            return true;
+        }
+        return false;
     }
-    public void withdraw (double amount) {
+    public boolean withdraw (double amount) {
         //balance = balance - amount;
-        balance -= amount;
+        if (balance > amount) {
+            balance -= amount;
+            return true;
+        }
+        return false;
     }
 
     @Override
