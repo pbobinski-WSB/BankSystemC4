@@ -1,23 +1,25 @@
 package wsb.po.banking;
 
+import java.util.ArrayList;
+
 public class Bank {
 
-    private Customer [] customers = new Customer[20];
+    private ArrayList<Customer> customers = new ArrayList<Customer>();
 
-    private int numberOfCustomers = 0;
+
 
     public Bank() {
     }
 
     public void addCustomer(String f, String l) {
-        customers[numberOfCustomers++] = new Customer(f, l);
+        customers.add(new Customer(f, l));
     }
 
     public int getNumberOfCustomers() {
-        return numberOfCustomers;
+        return customers.size();
     }
 
     public Customer getCustomer (int index) {
-        return customers[index];
+        return customers.get(index);
     }
 }
