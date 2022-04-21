@@ -8,22 +8,6 @@ public class TestBanking {
 
     public static void main(String[] args) {
 
-   /*
-  Customer: Simms, Jane
-    Account 1: current balance is ¤ 500.00
-    Account 2: current balance is ¤ 200.00
-Customer: Bryant, Owen
-    Account 1: current balance is ¤ 200.00
-Customer: Soley, Tim
-    Account 1: current balance is ¤ 1,500.00
-    Account 2: current balance is ¤ 200.00
-    Account 3: current balance is ¤ 200.00
-Customer: Soley, Maria
-    Account 1: current balance is ¤ 200.00
-    Account 2: current balance is ¤ 150.00
-
-    */
-
         Bank bank = new Bank();
 
         bank.addCustomer("Simms" , "Jane");
