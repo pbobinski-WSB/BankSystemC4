@@ -5,14 +5,20 @@ public class Customer {
     private String firstName;
     private String lastName;
 
-    private Account account;
+    private Account [] accounts = new Account[10];
 
-    public Account getAccount() {
-        return account;
+    private int numberOfAccouts = 0;
+
+    public int getNumberOfAccouts() {
+        return numberOfAccouts;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public Account getAccount(int index) {
+        return accounts[index];
+    }
+
+    public void addAccount(Account account) {
+        accounts[numberOfAccouts++] = account;
     }
 
     public Customer(String firstName, String lastName) {
@@ -33,7 +39,7 @@ public class Customer {
         return "Customer{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", account=" + (account==null ? "Brak konta" : account) +
+                ", number of accounts = " + numberOfAccouts +
                 '}';
     }
 }
