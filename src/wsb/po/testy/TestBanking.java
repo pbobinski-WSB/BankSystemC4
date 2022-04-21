@@ -10,19 +10,19 @@ public class TestBanking {
 
         Bank bank = new Bank();
 
-        bank.addCustomer("Simms" , "Jane");
-        bank.addCustomer("Bryant" , "Owen");
-        bank.addCustomer("Soley" , "Tim");
-        bank.addCustomer("Soley" , "Maria");
+        bank.addCustomer("PAWEL" , "WLASZCZIAK");
+        bank.addCustomer("JAN" , "PIOTRKOWSKI");
+        bank.addCustomer("NOWAKOWSKI" , "STEFAN");
+        bank.addCustomer("NOWAKOWSKA" , "URSZULA");
 
-        bank.getCustomer(0).addAccount(new Account(500));
-        bank.getCustomer(0).addAccount(new Account(200));
-        bank.getCustomer(1).addAccount(new Account(200));
-        bank.getCustomer(2).addAccount(new Account(1500));
-        bank.getCustomer(2).addAccount(new Account(200));
-        bank.getCustomer(2).addAccount(new Account(200));
-        bank.getCustomer(3).addAccount(new Account(200));
-        bank.getCustomer(3).addAccount(new Account(150));
+        bank.getCustomer(0).addAccount(new Account(1500));
+        bank.getCustomer(0).addAccount(new Account(1200));
+        bank.getCustomer(1).addAccount(new Account(1200));
+        bank.getCustomer(2).addAccount(new Account(2500));
+        bank.getCustomer(2).addAccount(new Account(1200));
+        bank.getCustomer(2).addAccount(new Account(1200));
+        bank.getCustomer(3).addAccount(new Account(1200));
+        bank.getCustomer(3).addAccount(new Account(1150));
 
 
         for (int i = 0; i < bank.getNumberOfCustomers(); i++) {
