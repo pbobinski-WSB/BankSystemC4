@@ -1,8 +1,8 @@
 package wsb.po.testy;
 
-import wsb.po.banking.CheckingAccount;
-import wsb.po.banking.NegativeDepositException;
-import wsb.po.banking.OverdraftException;
+import wsb.po.banking.domain.CheckingAccount;
+import wsb.po.banking.domain.NegativeDepositException;
+import wsb.po.banking.domain.OverdraftException;
 
 public class TestKont {
 
