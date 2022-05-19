@@ -18,17 +18,17 @@ public class CheckingAccount extends Account{
     }
 
     @Override
-    public boolean withdraw(double amount) {
+    public void withdraw(double amount) throws OverdraftException{
 
         if (amount > getBalance() + overdraftProtecion) {
-            return false;
+            throw new OverdraftException("bład wypłaty brak środków i limitu",amount - (getBalance() + overdraftProtecion));
         } else {
             if (amount < getBalance()) {
-                return super.withdraw(amount);
+                super.withdraw(amount);
             } else {
                 overdraftProtecion -= amount-getBalance();
                 System.out.println("****"+getBalance());
-                return super.withdraw(getBalance());
+                super.withdraw(getBalance());
             }
         }
 

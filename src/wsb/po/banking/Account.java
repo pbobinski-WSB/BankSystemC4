@@ -12,21 +12,21 @@ public class Account {
         return balance;
     }
 
-    public boolean deposit (double amount) {
+    public void deposit (double amount) throws NegativeDepositException {
         //balance = balance + amount;
         if (amount > 0) {
             balance += amount;
-            return true;
+        } else {
+            throw new NegativeDepositException("ujemna wpłata");
         }
-        return false;
     }
-    public boolean withdraw (double amount) {
+    public void withdraw (double amount) throws OverdraftException {
         //balance = balance - amount;
         if (balance >= amount) {
             balance -= amount;
-            return true;
+        } else {
+            throw new OverdraftException("bład wypłaty brak środków",amount - balance);
         }
-        return false;
     }
 
     @Override
